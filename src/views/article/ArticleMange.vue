@@ -5,6 +5,7 @@ import ChannelSelect from './components/ChannelSelect.vue'
 import { artGetListService, artDeleteService } from '@/api/article.js'
 import { formatTime } from '@/utils/format.js'
 import ArticleEdit from './components/ArticleEdit.vue'
+import ArticleView from './components/ArticleView.vue'
 const articleList = ref([]) // 文章列表
 const total = ref(0) // 总条数
 
@@ -92,6 +93,10 @@ const onSuccess = (type) => {
 }
 
 // 查看文章内容
+const articleViewRef = ref()
+const onViewArticle = (row) => {
+  articleViewRef.value.openDrawer(row)
+}
 
 </script>
 <template>
@@ -124,7 +129,7 @@ const onSuccess = (type) => {
     <el-table :data="articleList" v-loading="loading">
       <el-table-column label="Article Title" prop="title">
         <template #default="{ row }">
-          <el-link type="primary" :underline="false" @click="openDrawer">{{ row.title }}</el-link>
+          <el-link type="primary" :underline="false" @click="onViewArticle(row)">{{ row.title }}</el-link>
         </template>
       </el-table-column>
       <el-table-column label="Category" prop="cate_name"></el-table-column>
@@ -177,6 +182,9 @@ const onSuccess = (type) => {
 
     <!-- 添加编辑抽屉 -->
     <article-edit ref="articleEditRef" @success="onSuccess"></article-edit>
+
+    <!-- 查看文章内容抽屉 -->
+    <article-view ref="articleViewRef"></article-view>
   </page-container>
 </template>
 

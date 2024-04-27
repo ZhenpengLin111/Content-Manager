@@ -25,8 +25,8 @@ const rules = {
   title: [
     { required: true, message: 'Please Enter Article Title', trigger: 'blur' },
     {
-      pattern: /^\S{1,10}$/,
-      message: 'Title has to be 1 to 10 bit non-empty string',
+      min: 1, max: 30,
+      message: 'Title has to be less than or equal to 30 characters',
       trigger: 'blur'
     }
   ],

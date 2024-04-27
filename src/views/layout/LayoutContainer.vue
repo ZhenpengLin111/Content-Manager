@@ -125,7 +125,7 @@ const handleCommand = async (key) => {
       <el-main>
         <router-view></router-view>
       </el-main>
-      <el-footer>©2024 Created by Zpl</el-footer>
+      <el-footer>©2024 Powered by Zpl</el-footer>
     </el-container>
   </el-container>
 </template>
@@ -134,10 +134,13 @@ const handleCommand = async (key) => {
 .layout-container {
   height: 100vh;
   .el-aside {
-    background-color: #232323;
+    // background-color: #232323;
+    background: url('@/assets/bg3.jpg');
+    background-size: cover;
+    background-position: right;
     &__logo {
       height: 120px;
-      background: url('@/assets/logo.png') no-repeat center / 120px auto;
+      // background: url('@/assets/logo.png') no-repeat center / 120px auto;
     }
     .el-menu {
       border-right: none;
@@ -147,7 +150,11 @@ const handleCommand = async (key) => {
     background-color: #fff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    strong {
+      font-size: 1.7em;
+      margin-right: 20px;
+    }
     .el-dropdown__box {
       display: flex;
       align-items: center;
