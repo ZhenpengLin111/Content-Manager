@@ -11,7 +11,10 @@ import { useUserStore } from '@/stores'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/login', component: () => import('@/views/login/LoginPage.vue') }, // 登录页
+    { path: '/login',
+    component: () => import('@/views/login/LoginPage.vue'),
+    meta: { title: 'Login | ArticlePoster' }  
+  }, // 登录页
     {
       path: '/',
       component: () => import('@/views/layout/LayoutContainer.vue'),
@@ -23,19 +26,23 @@ const router = createRouter({
         },
         {
           path: '/article/channel',
-          component: () => import('@/views/article/ArticleChannel.vue')
+          component: () => import('@/views/article/ArticleChannel.vue'),
+          meta: { title: 'Article Channel | ArticlePoster' } 
         },
         {
           path: '/user/profile',
-          component: () => import('@/views/user/UserProfile.vue')
+          component: () => import('@/views/user/UserProfile.vue'),
+          meta: { title: 'User Profile | ArticlePoster' } 
         },
         {
           path: '/user/avatar',
-          component: () => import('@/views/user/UserAvatar.vue')
+          component: () => import('@/views/user/UserAvatar.vue'),
+          meta: { title: 'User Avatar | ArticlePoster' }
         },
         {
           path: '/user/password',
-          component: () => import('@/views/user/UserPassword.vue')
+          component: () => import('@/views/user/UserPassword.vue'),
+          meta: { title: 'User Password | ArticlePoster' } 
         }
       ]
     }
@@ -50,6 +57,8 @@ const router = createRouter({
 // 3. 具体路径 或 路由对象 拦截到对应的地址
 //    '/login'   { name: 'login'}
 router.beforeEach((to) => {
+  // set document's title base on path name
+  document.title = to.meta.title || 'ArticlePoster'
   // 如果没有token，且访问的是非登录页，拦截到登录，其他情况正常放行
   const useStore = useUserStore()
   if (!useStore.token && to.path !== '/login') return '/login'

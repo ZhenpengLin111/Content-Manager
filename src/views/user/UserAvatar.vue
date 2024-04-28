@@ -17,7 +17,7 @@ const onUploadFile = (file) => {
 }
 const onUpdateAvatar = async () => {
   const res = await userUpdateAvatarService(imgUrl.value)
-  console.log(res)
+  // console.log(res)
   await userStore.getUser()
   ElMessage({ type: 'success', message: 'Update Avatar Successfully' })
 }
@@ -35,7 +35,7 @@ const onUpdateAvatar = async () => {
           :on-change="onUploadFile"
         >
           <img v-if="imgUrl" :src="imgUrl" class="avatar" />
-          <img v-else src="@/assets/avatar.jpg" width="278" />
+          <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
         </el-upload>
         <br />
         <el-button
