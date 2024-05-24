@@ -13,7 +13,7 @@ const router = createRouter({
   routes: [
     { path: '/login',
     component: () => import('@/views/login/LoginPage.vue'),
-    meta: { title: 'Login | ArticlePoster' }  
+    meta: { title: 'Login | ArticleManager' }  
   }, // 登录页
     {
       path: '/',
@@ -27,22 +27,22 @@ const router = createRouter({
         {
           path: '/article/channel',
           component: () => import('@/views/article/ArticleChannel.vue'),
-          meta: { title: 'Article Channel | ArticlePoster' } 
+          meta: { title: 'Article Channel | ArticleManager' } 
         },
         {
           path: '/user/profile',
           component: () => import('@/views/user/UserProfile.vue'),
-          meta: { title: 'User Profile | ArticlePoster' } 
+          meta: { title: 'User Profile | ArticleManager' } 
         },
         {
           path: '/user/avatar',
           component: () => import('@/views/user/UserAvatar.vue'),
-          meta: { title: 'User Avatar | ArticlePoster' }
+          meta: { title: 'User Avatar | ArticleManager' }
         },
         {
           path: '/user/password',
           component: () => import('@/views/user/UserPassword.vue'),
-          meta: { title: 'User Password | ArticlePoster' } 
+          meta: { title: 'User Password | ArticleManager' } 
         }
       ]
     }
@@ -58,7 +58,7 @@ const router = createRouter({
 //    '/login'   { name: 'login'}
 router.beforeEach((to) => {
   // set document's title base on path name
-  document.title = to.meta.title || 'ArticlePoster'
+  document.title = to.meta.title || 'ArticleManager'
   // 如果没有token，且访问的是非登录页，拦截到登录，其他情况正常放行
   const useStore = useUserStore()
   if (!useStore.token && to.path !== '/login') return '/login'
