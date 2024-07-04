@@ -1,6 +1,6 @@
-# ArticlePoster
+# ArticleManager
 
-ArticlePoster is a Vue 3 application designed to simulate a real-world article management system. This project features user authentication, profile management, and comprehensive article management capabilities.
+ArticleManager is a Vue 3 application designed to simulate a real-world article management system. This project features user authentication, profile management, and comprehensive article management capabilities.
 
 ## Table of Contents
 
@@ -9,7 +9,6 @@ ArticlePoster is a Vue 3 application designed to simulate a real-world article m
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 
 ## Features
 
@@ -65,5 +64,3 @@ The project should now be running at `http://localhost:5173`.
 - Create new articles from the dashboard.
 - View, edit or delete existing articles.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
