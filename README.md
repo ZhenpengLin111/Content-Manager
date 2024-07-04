@@ -1,35 +1,69 @@
-# Vue3-big-event-admin
+# ArticlePoster
 
-This template should help get you started developing with Vue 3 in Vite.
+ArticlePoster is a Vue 3 application designed to simulate a real-world article management system. This project features user authentication, profile management, and comprehensive article management capabilities.
 
-## Recommended IDE Setup
+## Table of Contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Features](#features)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-## Customize configuration
+## Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **User Authentication:**
+  - Login and Logout functionality.
+- **User Profile Management:**
+  - Update username, email, and avatar.
+  - Reset password.
+- **Article Management:**
+  - Create, view, edit, and delete articles.
 
-## Project Setup
+## Demo
 
-```sh
-pnpm install
-```
+You can see a live demo of the application [here](https://zplarticlemanager.netlify.app).
 
-### Compile and Hot-Reload for Development
+## Technologies Used
 
-```sh
-pnpm dev
-```
+- Vue 3
+- Vue Router
+- Vuex
+- Axios
+- Element Plus
 
-### Compile and Minify for Production
+## Installation
 
-```sh
-pnpm build
-```
+To run any of the projects locally, follow these steps:
 
-### Lint with [ESLint](https://eslint.org/)
+1. Clone the repository: `git clone https://github.com/ZhenpengLin111/Article-Manager.git`
+2. Navigate to the project directory: `cd Article-Manager`
+3. Install dependencies: `pnpm install`
+4. Run the development server: `pnpm dev`
 
-```sh
-pnpm lint
-```
+The project should now be running at `http://localhost:5173`.
+
+## Usage
+
+1. Run the application:
+
+- Open your browser and navigate to `http://localhost:5173`.
+
+2. User Authentication:
+
+- Register a new account or login with existing credentials.
+
+3. User Profile Management:
+
+- Access the profile section to update your username, email, and avatar.
+- Use the reset password functionality to change your password.
+
+4. Article Management:
+
+- Create new article categories from the dashboard.
+- Create new articles from the dashboard.
+- View, edit or delete existing articles.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
