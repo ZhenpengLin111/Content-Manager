@@ -1,6 +1,6 @@
 # ArticleManager
 
-ArticleManager is a Vue 3 application designed to simulate a real-world article management system. This project features user authentication, profile management, and comprehensive article management capabilities.
+ArticleManager is a Vue 3 backend system for article management. This project features user authentication, profile management, and comprehensive article management capabilities.
 
 ## Table of Contents
 
@@ -34,7 +34,7 @@ You can see a live demo of the application [here](https://zplarticlemanager.netl
 
 ## Installation
 
-To run any of the projects locally, follow these steps:
+To run the project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/ZhenpengLin111/Article-Manager.git`
 2. Navigate to the project directory: `cd Article-Manager`
