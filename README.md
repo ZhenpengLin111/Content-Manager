@@ -1,6 +1,6 @@
-# ArticleManager
+# ContentManager
 
-ArticleManager is a Vue 3 backend system for article management. This project features user authentication, profile management, and comprehensive article management capabilities.
+ContentManager is a Vue 3 backend system for content management. This project features user authentication, profile management, and comprehensive article management capabilities.
 
 ## Table of Contents
 
