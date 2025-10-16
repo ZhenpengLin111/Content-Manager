@@ -1,6 +1,6 @@
 # ContentManager
 
-ContentManager is a Vue 3 backend system for content management. This project features user authentication, profile management, and comprehensive article management capabilities.
+ContentManager is a Vue 3 backend system for content management. This project features user authentication, profile management, and comprehensive content management capabilities.
 
 ## Table of Contents
 
@@ -17,8 +17,8 @@ ContentManager is a Vue 3 backend system for content management. This project fe
 - **User Profile Management:**
   - Update username, email, and avatar.
   - Reset password.
-- **Article Management:**
-  - Create, view, edit, and delete articles.
+- **Content Management:**
+  - Create, view, edit, and delete content.
 
 ## Demo
 
